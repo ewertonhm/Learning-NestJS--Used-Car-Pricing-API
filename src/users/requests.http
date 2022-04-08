@@ -8,7 +8,10 @@ Content-Type: application/json
 }
 
 ### list all users
-GET http://127.0.0.1:3000/auth/users
+GET http://127.0.0.1:3000/auth/list-users
 
 ### list a users
-GET http://127.0.0.1:3000/auth/users/2
+GET http://127.0.0.1:3000/auth/2
+
+### filter users by eamil
+GET http://127.0.0.1:3000/auth/?email=ewerton@email.com
