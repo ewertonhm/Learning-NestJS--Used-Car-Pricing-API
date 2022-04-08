@@ -11,7 +11,18 @@ Content-Type: application/json
 GET http://127.0.0.1:3000/auth/list-users
 
 ### list a users
-GET http://127.0.0.1:3000/auth/2
+GET http://127.0.0.1:3000/auth/4
 
 ### filter users by eamil
 GET http://127.0.0.1:3000/auth/?email=ewerton@email.com
+
+### Delete a user given id
+DELETE http://127.0.0.1:3000/auth/3
+
+### Update a user with given id
+PATCH http://127.0.0.1:3000/auth/4
+Content-Type: application/json
+
+{
+    "password":"123456798"
+}
