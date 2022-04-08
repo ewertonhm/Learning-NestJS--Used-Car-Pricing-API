@@ -17,7 +17,7 @@ GET http://127.0.0.1:3000/auth/4
 GET http://127.0.0.1:3000/auth/?email=ewerton@email.com
 
 ### Delete a user given id
-DELETE http://127.0.0.1:3000/auth/3
+DELETE http://127.0.0.1:3000/auth/32
 
 ### Update a user with given id
 PATCH http://127.0.0.1:3000/auth/4
