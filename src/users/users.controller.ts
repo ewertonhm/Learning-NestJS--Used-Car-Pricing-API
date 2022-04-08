@@ -2,6 +2,7 @@ import { Body, ClassSerializerInterceptor, Controller, Delete, Get, NotFoundExce
 import { CreateUserDto } from './dtos/create-user.dto';
 import { UpdateUserDto } from './dtos/update-user.dto';
 import { UsersService } from './users.service';
+import { SerializeInterceptor } from '../interceptors/serialize.interceptor';
 
 
 @Controller('auth')
@@ -14,13 +15,13 @@ export class UsersController {
         this.userService.create(body.email, body.password);
     }
 
-    @UseInterceptors(ClassSerializerInterceptor)
+    @UseInterceptors(SerializeInterceptor)
     @Get('/list-users')
     findAllUsers(){
         return this.userService.list();
     }
 
-    @UseInterceptors(ClassSerializerInterceptor)
+    @UseInterceptors(SerializeInterceptor)
     @Get('/:id')
     async findUser(@Param('id') id: string) {
         const user =  await this.userService.findOne(parseInt(id));
@@ -30,7 +31,7 @@ export class UsersController {
         return user;
     }
 
-    @UseInterceptors(ClassSerializerInterceptor)
+    @UseInterceptors(SerializeInterceptor)
     @Get()
     findUsersByEmail(@Query('email') email: string) {
         return this.userService.findByEmail(email);
