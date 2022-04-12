@@ -7,17 +7,26 @@ Content-Type: application/json
     "password": "123456"
 }
 
+### Signin
+POST http://127.0.0.1:3000/auth/signin
+Content-Type: application/json
+
+{
+    "email": "ewerton@email.com",
+    "password": "123456"
+}
+
 ### list all users
 GET http://127.0.0.1:3000/auth/list-users
 
 ### list a users
-GET http://127.0.0.1:3000/auth/4
+GET http://127.0.0.1:3000/auth/13
 
 ### filter users by eamil
 GET http://127.0.0.1:3000/auth/?email=ewerton@email.com
 
 ### Delete a user given id
-DELETE http://127.0.0.1:3000/auth/32
+DELETE http://127.0.0.1:3000/auth/11
 
 ### Update a user with given id
 PATCH http://127.0.0.1:3000/auth/4
