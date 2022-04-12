@@ -35,3 +35,6 @@ Content-Type: application/json
 {
     "password":"123456798"
 }
+
+### list a users
+GET http://127.0.0.1:3000/auth/colors/assadsa
